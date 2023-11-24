@@ -1,0 +1,58 @@
+﻿@model WebApplication4.Models.Schedule
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Schedule</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaxNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaxNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Doctor.RoleID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Doctor.RoleID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hour.HourName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hour.HourName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ScheduleID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

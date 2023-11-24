@@ -1,0 +1,57 @@
+﻿@model IEnumerable<WebApplication4.Models.Schedule>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaxNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CurrentNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Doctor.RoleID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hour.HourName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaxNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CurrentNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Doctor.RoleID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hour.HourName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ScheduleID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ScheduleID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ScheduleID })
+        </td>
+    </tr>
+}
+
+</table>
