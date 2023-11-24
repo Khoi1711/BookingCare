@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d1b3065c693042f2adb53ee0e56fca8d" Name="Diagram1">
+        <EntityTypeShape EntityType="BookingCareModel.AdminOfHospital" Width="1.5" PointX="6" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookingCareModel.AdminSystem" Width="1.5" PointX="3" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookingCareModel.BookingPatient" Width="1.5" PointX="5.25" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookingCareModel.Clinic" Width="1.5" PointX="3.75" PointY="25.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookingCareModel.Doctor" Width="1.5" PointX="0.75" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookingCareModel.Hospital" Width="1.5" PointX="3.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookingCareModel.Hour" Width="1.5" PointX="0.75" PointY="28.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookingCareModel.Patient" Width="1.5" PointX="3" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookingCareModel.Price" Width="1.5" PointX="1.5" PointY="23.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookingCareModel.Role" Width="1.5" PointX="0.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookingCareModel.Schedule" Width="1.5" PointX="3" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookingCareModel.Speciaty" Width="1.5" PointX="1.5" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookingCareModel.StaffSystem" Width="1.5" PointX="3" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookingCareModel.Status" Width="1.5" PointX="3" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookingCareModel.StaffOfHospital" Width="1.5" PointX="6" PointY="2.5" IsExpanded="true" />
+        <AssociationConnector Association="BookingCareModel.FK__AdminOfHo__Hospi__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="BookingCareModel.FK__AdminOfHo__RoleI__571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="BookingCareModel.FK__AdminSyst__RoleI__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="BookingCareModel.FK__BookingPa__Patie__03F0984C" ManuallyRouted="false" />
+        <AssociationConnector Association="BookingCareModel.FK__BookingPa__Sched__04E4BC85" ManuallyRouted="false" />
+        <AssociationConnector Association="BookingCareModel.FK__BookingPa__Statu__05D8E0BE" ManuallyRouted="false" />
+        <AssociationConnector Association="BookingCareModel.FK__Clinic__Speciaty__7A672E12" ManuallyRouted="false" />
+        <AssociationConnector Association="BookingCareModel.FK__Doctor__Hospital__70DDC3D8" ManuallyRouted="false" />
+        <AssociationConnector Association="BookingCareModel.FK__Doctor__PriceID__71D1E811" ManuallyRouted="false" />
+        <AssociationConnector Association="BookingCareModel.FK__Doctor__Speciaty__6FE99F9F" ManuallyRouted="false" />
+        <AssociationConnector Association="BookingCareModel.FK__Schedule__Doctor__00200768" ManuallyRouted="false" />
+        <AssociationConnector Association="BookingCareModel.FK__StaffOfHo__Hospi__7C4F7684" ManuallyRouted="false" />
+        <AssociationConnector Association="BookingCareModel.FK__Schedule__HourID__01142BA1" ManuallyRouted="false" />
+        <AssociationConnector Association="BookingCareModel.FK__Patient__RoleID__628FA481" ManuallyRouted="false" />
+        <AssociationConnector Association="BookingCareModel.FK__StaffSyst__RoleI__5441852A" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

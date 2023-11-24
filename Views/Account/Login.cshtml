@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+@using (Html.BeginForm("Login", "Account", FormMethod.Post))
+{
+    @Html.ValidationSummary(true)
+
+    <div>
+        <label for="username">Username:</label>
+        @Html.TextBox("username")
+    </div>
+
+    <div>
+        <label for="password">Password:</label>
+        @Html.Password("password")
+    </div>
+
+    <input type="submit" value="Login" />
+}
+
+@if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+{
+    <div>
+        <p>@ViewBag.ErrorMessage</p>
+    </div>
+}
