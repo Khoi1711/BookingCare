@@ -154,6 +154,7 @@
     <Compile Include="Controllers\AdminSystemsController.cs" />
     <Compile Include="Controllers\BookingPatientsController.cs" />
     <Compile Include="Controllers\ClinicsController.cs" />
+    <Compile Include="Controllers\PatientController.cs" />
     <Compile Include="Controllers\DoctorsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HospitalsController.cs" />
@@ -206,6 +207,7 @@
     <Compile Include="Models\Hour.cs">
       <DependentUpon>BookingCare.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\MailHelper.cs" />
     <Compile Include="Models\Patient.cs">
       <DependentUpon>BookingCare.tt</DependentUpon>
     </Compile>
@@ -249,6 +251,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\template\neworder.html" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -381,6 +384,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Default\" />
     <Folder Include="Views\User\" />
   </ItemGroup>
   <ItemGroup>

@@ -1,10 +1,15 @@
-﻿using System;
+﻿using Microsoft.Owin.BuilderProperties;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Reflection;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Web;
+using System.Web.Helpers;
 using System.Web.Mvc;
 using WebApplication4.Models;
 
@@ -62,6 +67,15 @@ namespace WebApplication4.Controllers
             ViewBag.PatientID = new SelectList(db.Patients, "PatientID", "RoleID", bookingPatient.PatientID);
             ViewBag.ScheduleID = new SelectList(db.Schedules, "ScheduleID", "DoctorID", bookingPatient.ScheduleID);
             ViewBag.StatusID = new SelectList(db.Status, "StatusID", "StatusName", bookingPatient.StatusID);
+  
+            //string content = System.IO.File.ReadAllText(Server.MapPath("~/Content/template/neworder.html"));
+            //content = content.Replace("{{PatientName}}", "PatientName");
+            //content = content.Replace("{{Phone}}", mobile);
+            //content = content.Replace("{{Email}}", email);
+            //content = content.Replace("{{Address}}", address);
+            
+            //var toEmail = ConfigurationManager.AppSettings["ToEmailAddress"].ToString();
+            //new MailHelper().SendMail(email, "Lich kham benh", content);
             return View(bookingPatient);
         }
 
