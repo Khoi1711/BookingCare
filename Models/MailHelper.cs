@@ -15,6 +15,10 @@ namespace WebApplication4
 
     public class MailHelper
     {
+        public MailHelper(string smtpServer, int smtpPort, string smtpUsername, string smtpPassword)
+        {
+        }
+
         public void SendMail(string toEmailAddress, string subject, string content)
         {
             var fromEmailAddress = ConfigurationManager.AppSettings["FromEmailAddress"].ToString();

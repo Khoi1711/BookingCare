@@ -1,7 +1,7 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-
+<link rel="stylesheet" type="text/css" href="~/Content/bot.css">
 <main>
     <section class="row" aria-labelledby="aspnetTitle">
         <h1 id="title">ASP.NET</h1>
@@ -29,5 +29,16 @@
             <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
             <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
         </section>
+        <!-- Trong phần head của trang HTML -->
+        <!-- Trong phần body của trang HTML -->
+        <script type="text/javascript" src="~/Content/bot.js"></script>
+
     </div>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger intent="WELCOME"
+                  chat-title="BookingCare"
+                  agent-id="aa3a08b3-b966-4d52-9575-3316bff59b4d"
+                  language-code="vi"></df-messenger>
+
 </main>
+

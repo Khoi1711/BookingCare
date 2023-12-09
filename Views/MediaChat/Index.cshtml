@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Chat";
+}
+
+<h2>Medical Chat</h2>
+
+<div id="chat">
+    <div id="chat-messages"></div>
+    <div id="chat-options">
+        <button onclick="sendOption('ngoại khoa')">Ngoại Khoa</button>
+        <button onclick="sendOption('nội khoa')">Nội Khoa</button>
+        <!-- Thêm những option khác nếu cần -->
+    </div>
+</div>
+
+<script>
+    function sendOption(option) {
+        var chatMessages = $('#chat-messages');
+
+        // Hiển thị option được chọn trong chat box
+        var optionElement = $('<div>').text('You selected: ' + option);
+        chatMessages.append(optionElement);
+
+        // Gửi yêu cầu xử lý đến server
+        $.ajax({
+            url: '/Chat/ProcessUserMessage',
+            type: 'POST',
+            data: { userMessage: option },
+            success: function (data) {
+                // Hiển thị phản hồi từ server
+                var botResponseElement = $('<div>').text('Bot: ' + data.response);
+                chatMessages.append(botResponseElement);
+            },
+            error: function (error) {
+                console.error('Error processing user option:', error);
+            }
+        });
+    }
+</script>

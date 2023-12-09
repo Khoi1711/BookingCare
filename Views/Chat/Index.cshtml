@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Chat";
+}
+
+<div id="chat-container">
+    <div id="chat-messages"></div>
+    <div id="user-input">
+        <input type="text" id="user-message" placeholder="Type your message..." />
+        <button id="send-button">Send</button>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Gắn sự kiện click cho nút gửi
+        $("#send-button").click(function () {
+            sendMessage();
+        });
+
+        // Gắn sự kiện keypress cho ô nhập liệu để gửi tin nhắn khi nhấn Enter
+        $("#user-message").keypress(function (e) {
+            if (e.which === 13) {
+                sendMessage();
+            }
+        });
+
+        function sendMessage() {
+            var userMessage = $("#user-message").val();
+            if (userMessage.trim() !== "") {
+                // Gửi yêu cầu lên server và nhận phản hồi
+                $.post("/Chat/ProcessUserMessage", { userMessage: userMessage }, function (data) {
+                    if (data.success) {
+                        // Hiển thị phản hồi từ server
+                        $("#chat-messages").append("<p>User: " + userMessage + "</p>");
+                        $("#chat-messages").append("<p>Bot: " + data.response + "</p>");
+                    } else {
+                        // Xử lý lỗi nếu có
+                        console.error(data.errorMessage);
+                    }
+
+                    // Xóa nội dung trong ô nhập liệu
+                    $("#user-message").val("");
+                });
+            }
+        }
+    });
+</script>

@@ -40,8 +40,8 @@ namespace WebApplication4.Controllers
                 };
 
                 var identity = new System.Security.Claims.ClaimsIdentity(claims, "ApplicationCookie");
-                //var authManager = System.Web.HttpContext.Current.GetOwinContext().Authentication;
-                //authManager.SignIn(new AuthenticationProperties { IsPersistent = false }, identity);
+                var authManager = System.Web.HttpContext.Current.GetOwinContext().Authentication;
+                authManager.SignIn(new AuthenticationProperties { IsPersistent = false }, identity);
 
                 // Redirect to the appropriate page based on the user's role
                 if (role == "StaffSystem")

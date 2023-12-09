@@ -1,6 +1,8 @@
 ﻿using System.Configuration;
 using System.Web.Mvc;
 using System;
+using WebApplication4;
+
 
 public class PatientController : Controller
 {
@@ -21,7 +23,7 @@ public class PatientController : Controller
         string subject = "Thông báo về cuộc hẹn";
         string body = "Đây là thông báo về cuộc hẹn của bạn.";
 
-        _mailHelper.SendEmail(patientEmail, subject, body);
+        _mailHelper.SendMail(patientEmail, subject, body);
 
         return View();
     }
